@@ -1,6 +1,8 @@
 - name: Tag and push to docker hub
-    community.docker.docker_image:
+  docker_image:
     name: myapp-cd:latest
     repository: amineturki/cd
-    push: true
+    tag: latest
+    push: yes
     source: local
+   
