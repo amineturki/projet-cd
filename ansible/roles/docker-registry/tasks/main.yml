@@ -1,5 +1,5 @@
 - name: Tag and push to docker hub
-  became: true
+  become: true
   docker_image:
     name: myapp-cd:latest
     repository: amineturki/cd
