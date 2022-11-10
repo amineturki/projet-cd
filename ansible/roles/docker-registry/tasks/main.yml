@@ -8,5 +8,5 @@
   docker_image:
     name: myapp-cd
     repository: amineturki/cd
-    tag: 7.0
+    tag: latest
     push: yes
