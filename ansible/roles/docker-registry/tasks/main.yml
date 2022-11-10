@@ -4,12 +4,12 @@
     password: 181JMT1811
 	   
 - name: Build Docker image from Dockerfile   
-   docker_image: 
-     name: myapp-cd
-     build:
-       path: /var/lib/jenkins/workspace/cd
-     source: build
-	   tag : 7.0
-	   push: yes
-     state: present
-     force_source: true
+  docker_image: 
+    name: myapp-cd
+    build:
+      path: /var/lib/jenkins/workspace/cd
+    source: build
+	  tag : 7.0
+	  push: yes
+    state: present
+    force_source: true
