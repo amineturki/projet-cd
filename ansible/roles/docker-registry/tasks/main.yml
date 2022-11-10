@@ -9,6 +9,6 @@
   docker tag amineturki/myapp-cd amineturki/cd:latest
   
 - name: Push image to DockerHub 
- become: yes
- shell:
- docker push  amineturki/cd
+  become: yes
+  shell:
+  docker push  amineturki/cd
