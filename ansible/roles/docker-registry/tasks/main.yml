@@ -2,7 +2,7 @@
   become: true
   docker_image:
     name: myapp-cd:latest
-    repository: https://hub.docker.com/repository/docker/amineturki/cd
+    repository: https://registry.hub.docker.com/amineturki/cd
     tag: 7.0
     push: yes
     state : present
