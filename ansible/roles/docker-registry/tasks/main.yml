@@ -5,9 +5,4 @@
    password: 181JMT1811   
 - name: Tag and push to docker hub
   become: yes
-  docker_image:
-    name: amineturki/myapp-cd
-    source: local
-    repository: amineturki/cd
-    tag: latest
-    push: yes
+  shell: docker push amineturki/myapp-cd amineturki/cd
