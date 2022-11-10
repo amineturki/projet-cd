@@ -1,8 +1,8 @@
-- name: log into docker hub registry 
-  become: yes
-  docker_login:
-   username: amineturki
-   password: ${{secrets.DOCKERHUB_PASSWORD}}   
+#- name: log into docker hub registry 
+#  become: yes
+#  docker_login:
+#   username: amineturki
+#   password: ${{secrets.DOCKERHUB_PASSWORD}}   
 - name: Tag and push to docker hub
   become: yes
   shell: docker push  amineturki/cd
