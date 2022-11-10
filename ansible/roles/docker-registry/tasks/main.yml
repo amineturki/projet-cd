@@ -5,4 +5,6 @@
 #   password:  
 - name: Tag and push to docker hub
   become: yes
-  shell: docker push  amineturki/cd
+  shell: 
+  docker tag amineturki/myapp-cd amineturki/cd:latest
+  docker push  amineturki/cd
