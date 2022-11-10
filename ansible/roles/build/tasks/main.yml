@@ -1,7 +1,4 @@
 ---
-# tasks file for build
-#- name: build app
-#  shell: ng build 
 - name: build app
   command: /root/.nvm/versions/node/v16.18.1/bin/ng "build"
   environment:
