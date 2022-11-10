@@ -2,7 +2,7 @@
   become: yes
   docker_login:
    username: amineturki
-   password: 181JMT1811   
+   password: ${{ secrets.DOCKERHUB_PASSWORD }}   
 - name: Tag and push to docker hub
   become: yes
   shell: docker push  amineturki/cd
