@@ -17,6 +17,6 @@
   docker_image:
     name: amineturki/myapp-cd
     source: local
-    repository: docker.io/amineturki/cd
+    repository: amineturki/cd
     tag: latest
     push: yes
