@@ -7,6 +7,6 @@
   become: yes
   docker_image:
     name: myapp-cd
-    repository: amineturki/cd
+    repository: docker.io/amineturki/cd
     tag: latest
     push: yes
