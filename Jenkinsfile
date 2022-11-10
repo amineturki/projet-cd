@@ -46,6 +46,11 @@ pipeline {
                 sh 'ansible-playbook ansible/docker.yml -i ansible/inventory/hosts.yml'
                          }
         }
+        stage('Ansible playbook for pushing the image to a dockerhub repository') {
+            steps {
+                sh 'ansible-playbook ansible/docker-registry.yml -i ansible/inventory/hosts.yml'
+                         }
+        }
 
 	 
 	}
