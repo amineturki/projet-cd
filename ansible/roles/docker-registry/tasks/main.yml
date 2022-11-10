@@ -8,6 +8,6 @@
    build:
     path: /var/lib/jenkins/workspace/cd
    source: build
-	 push: yes
+   push: yes
    state: present
    force_source: true
