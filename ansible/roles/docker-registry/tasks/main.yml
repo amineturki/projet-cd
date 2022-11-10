@@ -1,8 +1,8 @@
  
 - name: Tag image
   become: yes
-  shell: docker tag amineturki/myapp-cd amineturki/cd:v1
+  shell: docker tag amineturki/myapp-cd amineturki/cd:latest
   
 - name: Push image to DockerHub 
   become: yes
-  shell: docker push  amineturki/cd:v1
+  shell: docker push  amineturki/cd:latest
