@@ -3,15 +3,6 @@
   docker_login:
    username: amineturki
    password: 181JMT1811   
-- name: create image docker
-  docker_image: 
-    name: amineturki/myapp-cd
-    build:
-     path: /var/lib/jenkins/workspace/cd
-     pull: no
-    source: build
-    state: present
-    force_source: true   
 - name: Tag and push to docker hub
   become: yes
   docker_image:
