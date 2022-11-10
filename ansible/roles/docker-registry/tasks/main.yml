@@ -5,10 +5,8 @@
 #   password:  
 - name: Tag image
   become: yes
-  shell: 
-  docker tag amineturki/myapp-cd amineturki/cd:latest
+  shell: docker tag amineturki/myapp-cd amineturki/cd:latest
   
 - name: Push image to DockerHub 
   become: yes
-  shell:
-  docker push  amineturki/cd
+  shell: docker push  amineturki/cd
