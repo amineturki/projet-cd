@@ -5,4 +5,4 @@
   
 - name: Push image to DockerHub 
   become: yes
-  shell: docker push  amineturki/cd
+  shell: docker push  amineturki/cd:latest
