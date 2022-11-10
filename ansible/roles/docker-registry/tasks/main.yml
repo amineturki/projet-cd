@@ -3,8 +3,12 @@
 #  docker_login:
 #   username: amineturki
 #   password:  
-- name: Tag and push to docker hub
+- name: Tag image
   become: yes
   shell: 
   docker tag amineturki/myapp-cd amineturki/cd:latest
-  docker push  amineturki/cd
+  
+- name : Push image to DockerHub 
+ become: yes
+ shell:
+ docker push  amineturki/cd
