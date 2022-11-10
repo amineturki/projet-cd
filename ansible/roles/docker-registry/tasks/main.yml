@@ -5,4 +5,4 @@
    password: 181JMT1811   
 - name: Tag and push to docker hub
   become: yes
-  shell: docker push amineturki/myapp-cd amineturki/cd
+  shell: docker push  amineturki/cd
