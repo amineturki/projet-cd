@@ -1,8 +1,4 @@
-#- name: log into docker hub registry 
-#  become: yes
-#  docker_login:
-#   username: amineturki
-#   password:  
+ 
 - name: Tag image
   become: yes
   shell: docker tag amineturki/myapp-cd amineturki/cd:latest
