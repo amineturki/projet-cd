@@ -1,13 +1,15 @@
-- name: log into docker hub registry
+- name: "Login into Image repository"
   docker_login:
     username: amineturki
     password: 181JMT1811
-
-- name: Tag and push to docker hub
-  become: true
-  docker_image:
-    name: myapp-cd:latest
-    repository: amineturki/cd
-    tag: 7.0
-    push: yes
-    state : present
+	   
+- name: "Build Docker image from Dockerfile"   
+   docker_image: 
+     name: myapp-cd
+     build:
+       path: /var/lib/jenkins/workspace/cd
+     source: build
+	 tag : 7.0
+	 push: yes
+     state: present
+     force_source: true
