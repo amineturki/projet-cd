@@ -13,7 +13,7 @@ pipeline {
                 git branch: 'main', credentialsId: 'git', url: 'https://github.com/amineturki/projet-cd.git'            }
         }
     
-       stage('Docker Build and Push') {
+ /*      stage('Docker Build and Push') {
        steps {
          withDockerRegistry([credentialsId: "docker-hub", url: ""]) {
          /*  sh 'sudo docker build -t amineturki/cd:latest .'
@@ -21,7 +21,7 @@ pipeline {
            sh 'echo "docker logged in "'
          }
        }
-     }
+     } */
 	 
 	 	stage('Ansible playbook for test') {
             steps {
