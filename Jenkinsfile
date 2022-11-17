@@ -32,7 +32,21 @@ pipeline {
         }
      	
     
-
+    	       stage('deploy to kubernetes?') {
+       steps {
+         timeout(time: 1, unit: 'DAYS') {
+           input 'Do you want to Approve the Deployment to Kubernetes ?'
+         }
+       }
+     }
+    
+    stage('deploy to kubernetes') {
+      steps {
+         withKubeConfig([credentialsId: 'kubeconfig']) {
+           sh 'kubectl  apply -f deployment-angular.yml'
+         }
+       }
+     }
 
  
 
