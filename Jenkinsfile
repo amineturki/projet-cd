@@ -17,7 +17,7 @@ pipeline {
        steps {
          withDockerRegistry([credentialsId: "docker-hub", url: ""]) {
          /*  sh 'sudo docker build -t amineturki/cd:latest .'
-           sh 'docker push amineturki/cd:latest '  */
+           sh 'docker push amineturki/cd:latest '  
            sh 'echo "docker logged in "'
          }
        }
