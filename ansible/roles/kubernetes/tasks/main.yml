@@ -1,4 +1,3 @@
----
  - name: "Playbook to test the inventory_hostname and ansible_hostname"
    hosts: testserver
    tasks:
