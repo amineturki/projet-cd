@@ -44,7 +44,7 @@ pipeline {
       steps {
          withKubeConfig([credentialsId: 'kubeconfig']) {
           // sh 'kubectl  apply -f deployment-angular.yml'
-       sh 'ansible-playbook ansible/kubernetes.yml -i ansible/inventory/hosts.yml'
+       sh 'ansible-playbook ansible/kubernetes.yml -i ansible/inventory/host-amine.yml'
 
          }
        }
