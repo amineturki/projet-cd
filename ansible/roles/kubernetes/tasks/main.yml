@@ -8,4 +8,6 @@
 
 - name: deploy app
   shell: kubectl  apply -f deployment-angular.yml
+  become: yes
+  become_user: cd-amine
 # tasks file for kubernetes
