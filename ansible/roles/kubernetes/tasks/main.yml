@@ -1,9 +1,9 @@
-- become: true
-- become_user: cd-amine
-- become_method: sudo
+
 - name: "just execute a ls -lrt command"
   shell: "whoami"
   register: "output"
+  become: yes
+  become_user: cd-amine
 - debug: var=output.stdout_lines
 #- name: deploy app
 #  shell: kubectl  apply -f deployment-angular.yml
