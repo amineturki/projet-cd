@@ -1,4 +1,6 @@
 ---
+- name: user
+  shell: whoami
 - name: deploy app
   shell: kubectl  apply -f deployment-angular.yml
 # tasks file for kubernetes
