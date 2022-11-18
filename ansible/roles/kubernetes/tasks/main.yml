@@ -1,7 +1,7 @@
-- name: What is my inventory_hostname
-  debug: var={{inventory_hostname}}
-- name: What is my ansible_hostname
-  debug: var={{ansible_hostname}}
+- name: "just execute a ls -lrt command"
+  shell: "whoami"
+  register: "output"
+- debug: var=output.stdout_lines
 #- name: deploy app
 #  shell: kubectl  apply -f deployment-angular.yml
 # tasks file for kubernetes
