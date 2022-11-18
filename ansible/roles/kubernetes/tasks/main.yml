@@ -13,20 +13,13 @@
   become_user: cd-amine
 - debug: var=output.stdout_lines
 
-- name: "go to cd workspace"
-  shell: "cd /var/lib/jenkins/workspace/cd/"
-  become: yes
-  become_user: cd-amine
-  
-- name: "current directory 2"
-  shell: "pwd"
-  register: "output"
-  become: yes
-  become_user: cd-amine
-- debug: var=output.stdout_lines
-
-- name: deploy app
+- name: deploy the app
   shell: kubectl  apply -f deployment-angular.yml
   become: yes
   become_user: cd-amine
+  
+- name: service for the app
+  shell: kubectl  apply -f service-angular-yml
+  become: yes
+  become_user: cd-amine  
 # tasks file for kubernetes
