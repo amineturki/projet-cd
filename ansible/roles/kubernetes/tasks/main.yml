@@ -19,7 +19,7 @@
   become_user: cd-amine
   
 - name: service for the app
-  shell: kubectl  apply -f k8s-resources/service-angular-yml
+  shell: kubectl  apply -f k8s-resources/service-angular.yml
   become: yes
   become_user: cd-amine  
 # tasks file for kubernetes
