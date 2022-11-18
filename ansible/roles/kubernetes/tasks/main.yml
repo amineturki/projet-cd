@@ -7,7 +7,7 @@
 - debug: var=output.stdout_lines
 
 - name: "just execute a ls -lrt command"
-  shell: "pwq"
+  shell: "pwd"
   register: "output"
   become: yes
   become_user: cd-amine
