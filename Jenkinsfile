@@ -43,7 +43,9 @@ pipeline {
     stage('deploy to kubernetes') {
       steps {
          withKubeConfig([credentialsId: 'kubeconfig']) {
-           sh 'kubectl  apply -f deployment-angular.yml'
+          // sh 'kubectl  apply -f deployment-angular.yml'
+       sh 'ansible-playbook ansible/kubernetes.yml -i ansible/inventory/hosts.yml'
+
          }
        }
      }
