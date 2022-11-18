@@ -1,12 +1,24 @@
 
-- name: "just execute a ls -lrt command"
+- name: "current user"
   shell: "whoami"
   register: "output"
   become: yes
   become_user: cd-amine
 - debug: var=output.stdout_lines
 
-- name: "just execute a ls -lrt command"
+- name: "current directory"
+  shell: "pwd"
+  register: "output"
+  become: yes
+  become_user: cd-amine
+- debug: var=output.stdout_lines
+
+- name: "go to cd workspace"
+  shell: "cd /var/lib/jenkins/workspace/cd/"
+  become: yes
+  become_user: cd-amine
+  
+- name: "current directory 2"
   shell: "pwd"
   register: "output"
   become: yes
